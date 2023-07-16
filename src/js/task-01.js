@@ -3,11 +3,11 @@
 const categoriesList = document.querySelector('#categories');
 const categoryItems = categoriesList.querySelectorAll('.item');
 
-// 1. Count and output the number of categories
+// Підрахувати та вивести кількість категорій
 const categoryCount = categoryItems.length;
 console.log('Number of categories:', categoryCount);
 
-// 2. Iterate through each category and output the title and number of elements
+// Перейти по кожній категорії та вивести назву та кількість елементів
 categoryItems.forEach((category) => {
   const titleElement = category.querySelector('h2');
   const categoryTitle = titleElement.textContent.trim();

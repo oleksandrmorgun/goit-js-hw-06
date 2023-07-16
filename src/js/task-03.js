@@ -13,15 +13,15 @@ const images = [
   },
 ];
 
-// Get the gallery element
+// Отримати елемент галереї
 const gallery = document.querySelector('ul.gallery');
 
-// Create the markup for each image
+// Створити розмітку для кожного зображення
 const imageMarkup = images.map((image) => `
   <li>
     <img src="${image.url}" alt="${image.alt}">
   </li>
 `).join('');
 
-// Add the image markup to the gallery
+// Додати розмітку зображення до галереї
 gallery.insertAdjacentHTML('beforeend', imageMarkup);

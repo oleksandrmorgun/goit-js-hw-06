@@ -1,27 +1,27 @@
-// Get the counter elements
+// Отримати елементи 
 const decrementButton = document.querySelector('[data-action="decrement"]');
 const incrementButton = document.querySelector('[data-action="increment"]');
 const counterValueElement = document.querySelector('#value');
 
-// Initialize the counter value
+// Ініціалізувати значення лічильника
 let counterValue = 0;
 
-// Update the interface with the current counter value
+// Оновити інтерфейс поточним значенням лічильника
 function updateCounterValue() {
   counterValueElement.textContent = counterValue;
 }
 
-// Decrement the counter value when the decrement button is clicked
+// Зменшити значення лічильника, якщо натиснути кнопку зменшення
 decrementButton.addEventListener('click', () => {
   counterValue--;
   updateCounterValue();
 });
 
-// Increment the counter value when the increment button is clicked
+// Збільшити значення лічильника, якщо натиснути кнопку збільшення
 incrementButton.addEventListener('click', () => {
   counterValue++;
   updateCounterValue();
 });
 
-// Initial update of the counter value
+// Початкове оновлення значення лічильника
 updateCounterValue();
