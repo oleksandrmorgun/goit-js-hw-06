@@ -1,19 +1,11 @@
-1.
+const categoriesList = document.getElementById('categories');
+const categoriesItems = categoriesList.children;
 
-const categoriesList = document.querySelector('#categories');
-const categoryItems = categoriesList.querySelectorAll('.item');
+console.log(`Total categories: ${categoriesItems.length}`);
 
-// Підрахувати та вивести кількість категорій
-const categoryCount = categoryItems.length;
-console.log('Number of categories:', categoryCount);
-
-// Перейти по кожній категорії та вивести назву та кількість елементів
-categoryItems.forEach((category) => {
-  const titleElement = category.querySelector('h2');
-  const categoryTitle = titleElement.textContent.trim();
-  const categoryElements = category.querySelectorAll('li');
-  const elementCount = categoryElements.length;
-
-  console.log('Category:', categoryTitle);
-  console.log('Elements:', elementCount);
+Array.from(categoriesItems).forEach((item) => {
+  const categoryTitle = item.firstElementChild.textContent;
+  const categoryItems = item.lastElementChild.children;
+  console.log(`Category: ${categoryTitle}`);
+  console.log(`Elements: ${categoryItems.length}`);
 });
